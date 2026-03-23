@@ -222,11 +222,36 @@
 
     
     <!-- BOT SELECTION TABS -->
-    <section id="bot-selection" class="py-6 pt-16 px-4 relative z-30 flex justify-center GSAP-REVEAL">
-        <div class="glass-card p-2 rounded-full flex gap-2 overflow-x-auto max-w-full hide-scrollbar border border-[#3AAFA9]/30">
-            <button onclick="window.switchBot('trade-gain')" id="tab-trade-gain" class="bot-tab whitespace-nowrap px-6 py-3 rounded-full font-bold text-sm md:text-base transition-all bg-[#3AAFA9] text-[#17252A] shadow-[0_0_15px_rgba(58,175,169,0.5)]">Trade Gain</button>
-            <button onclick="window.switchBot('fox-forex')" id="tab-fox-forex" class="bot-tab whitespace-nowrap px-6 py-3 rounded-full font-bold text-sm md:text-base transition-all text-[#3AAFA9] hover:bg-[#3AAFA9]/10">Fox Forex Bot</button>
-            <button onclick="window.switchBot('big-edge')" id="tab-big-edge" class="bot-tab whitespace-nowrap px-6 py-3 rounded-full font-bold text-sm md:text-base transition-all text-[#3AAFA9] hover:bg-[#3AAFA9]/10">Big Edge Bot</button>
+    <section id="bot-selection" class="py-10 pt-16 px-4 relative z-30 flex justify-center GSAP-REVEAL">
+        <div class="flex flex-wrap justify-center gap-6 md:gap-8 max-w-5xl mx-auto w-full">
+            
+            <!-- Trade Gain Card (Active by Default) -->
+            <button onclick="window.switchBot('trade-gain')" id="tab-trade-gain" class="bot-tab group relative flex flex-col items-center justify-center p-4 rounded-3xl border-2 border-[#3AAFA9] bg-[#3AAFA9]/10 shadow-[0_0_20px_rgba(58,175,169,0.3)] opacity-100 scale-105 transition-all duration-300 w-[45%] md:w-64 max-w-[280px]">
+                <div class="w-full bg-[#17252A]/40 rounded-2xl overflow-hidden mb-4 border border-[#3AAFA9]/20 group-hover:border-[#3AAFA9]/50 transition-colors">
+                    <img src="https://files.catbox.moe/ylu4y5.png" alt="Trade Gain" class="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <span class="font-black text-[#FEFFFF] text-lg md:text-xl tracking-wide group-hover:text-[#3AAFA9] transition-colors uppercase">Trade Gain</span>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#3AAFA9]/20 to-transparent rounded-3xl pointer-events-none opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+            </button>
+
+            <!-- Fox Forex Card (Inactive Placeholder) -->
+            <button onclick="window.switchBot('fox-forex')" id="tab-fox-forex" class="bot-tab group relative flex flex-col items-center justify-center p-4 rounded-3xl border-2 border-[#3AAFA9]/30 bg-[#17252A]/60 opacity-60 scale-100 hover:opacity-100 hover:border-[#3AAFA9]/50 hover:bg-[#3AAFA9]/5 transition-all duration-300 w-[45%] md:w-64 max-w-[280px]">
+                <div class="w-full aspect-[4/3] bg-[#17252A] rounded-2xl overflow-hidden mb-4 border border-[#3AAFA9]/20 flex items-center justify-center group-hover:border-[#3AAFA9]/50 transition-colors">
+                    <i class="fa-solid fa-robot text-5xl md:text-6xl text-[#3AAFA9]/40 group-hover:scale-110 group-hover:text-[#3AAFA9] transition-all duration-500"></i>
+                </div>
+                <span class="font-black text-[#DEF2F1] text-lg md:text-xl tracking-wide group-hover:text-[#FEFFFF] transition-colors uppercase">Fox Forex</span>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#3AAFA9]/20 to-transparent rounded-3xl pointer-events-none opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+            </button>
+
+            <!-- Big Edge Card (Inactive) -->
+            <button onclick="window.switchBot('big-edge')" id="tab-big-edge" class="bot-tab group relative flex flex-col items-center justify-center p-4 rounded-3xl border-2 border-[#3AAFA9]/30 bg-[#17252A]/60 opacity-60 scale-100 hover:opacity-100 hover:border-[#3AAFA9]/50 hover:bg-[#3AAFA9]/5 transition-all duration-300 w-[45%] md:w-64 max-w-[280px]">
+                <div class="w-full bg-[#17252A]/40 rounded-2xl overflow-hidden mb-4 border border-[#3AAFA9]/20 group-hover:border-[#3AAFA9]/50 transition-colors">
+                    <img src="https://files.catbox.moe/culwhk.PNG" alt="Big Edge" class="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <span class="font-black text-[#DEF2F1] text-lg md:text-xl tracking-wide group-hover:text-[#FEFFFF] transition-colors uppercase">Big Edge</span>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#3AAFA9]/20 to-transparent rounded-3xl pointer-events-none opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+            </button>
+
         </div>
     </section>
 <div id="content-trade-gain" class="bot-content block"> <!-- BACKTESTING SECTION -->
@@ -930,13 +955,30 @@
         });
         // Switch Bot Logic
         window.switchBot = function(botId) {
+            // Reset all tabs to inactive state
             document.querySelectorAll('.bot-tab').forEach(tab => {
-                tab.classList.remove('bg-[#3AAFA9]', 'text-[#17252A]', 'shadow-[0_0_15px_rgba(58,175,169,0.5)]');
-                tab.classList.add('text-[#3AAFA9]');
+                tab.classList.remove('border-[#3AAFA9]', 'bg-[#3AAFA9]/10', 'shadow-[0_0_20px_rgba(58,175,169,0.3)]', 'opacity-100', 'scale-105');
+                tab.classList.add('border-[#3AAFA9]/30', 'bg-[#17252A]/60', 'opacity-60', 'scale-100');
+                
+                // Reset text active colors
+                const span = tab.querySelector('span');
+                if(span) {
+                    span.classList.remove('text-[#FEFFFF]');
+                    span.classList.add('text-[#DEF2F1]');
+                }
             });
+            
+            // Set clicked tab to active state
             const activeTab = document.getElementById('tab-' + botId);
-            activeTab.classList.remove('text-[#3AAFA9]');
-            activeTab.classList.add('bg-[#3AAFA9]', 'text-[#17252A]', 'shadow-[0_0_15px_rgba(58,175,169,0.5)]');
+            activeTab.classList.remove('border-[#3AAFA9]/30', 'bg-[#17252A]/60', 'opacity-60', 'scale-100');
+            activeTab.classList.add('border-[#3AAFA9]', 'bg-[#3AAFA9]/10', 'shadow-[0_0_20px_rgba(58,175,169,0.3)]', 'opacity-100', 'scale-105');
+            
+            // Set text active color
+            const activeSpan = activeTab.querySelector('span');
+            if(activeSpan) {
+                activeSpan.classList.remove('text-[#DEF2F1]');
+                activeSpan.classList.add('text-[#FEFFFF]');
+            }
 
             document.querySelectorAll('.bot-content').forEach(content => {
                 content.classList.add('hidden');
