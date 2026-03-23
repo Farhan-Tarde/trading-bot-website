@@ -239,6 +239,13 @@
                 <span class="absolute bottom-5 font-black text-[#DEF2F1] text-lg md:text-2xl tracking-wide drop-shadow-[0_0_10px_rgba(0,0,0,0.8)] uppercase z-10 transition-colors">Fox Forex</span>
             </button>
 
+            <!-- Lux Grid Card (Inactive) -->
+            <button onclick="window.switchBot('lux-grid')" id="tab-lux-grid" class="bot-tab group relative flex flex-col items-center justify-center rounded-3xl border-2 border-[#3AAFA9]/30 bg-[#17252A]/80 opacity-60 scale-100 hover:opacity-100 hover:border-[#3AAFA9]/50 hover:bg-[#3AAFA9]/20 transition-all duration-300 w-[45%] md:w-56 overflow-hidden aspect-[3/4]">
+                <img src="https://files.catbox.moe/p3theb.PNG" alt="Lux Grid" class="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#17252A] via-[#17252A]/5 to-transparent opacity-80"></div>
+                <span class="absolute bottom-5 font-black text-[#DEF2F1] text-lg md:text-2xl tracking-wide drop-shadow-[0_0_10px_rgba(0,0,0,0.8)] uppercase z-10 transition-colors">Lux Grid</span>
+            </button>
+
             <!-- Big Edge Card (Inactive) -->
             <button onclick="window.switchBot('big-edge')" id="tab-big-edge" class="bot-tab group relative flex flex-col items-center justify-center rounded-3xl border-2 border-[#3AAFA9]/30 bg-[#17252A]/80 opacity-60 scale-100 hover:opacity-100 hover:border-[#3AAFA9]/50 hover:bg-[#3AAFA9]/20 transition-all duration-300 w-[45%] md:w-56 overflow-hidden aspect-[3/4]">
                 <img src="https://files.catbox.moe/culwhk.PNG" alt="Big Edge" class="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500">
@@ -570,6 +577,197 @@
     </section>
 
     <!-- Live & Funded Accounts Component for Fox Forex -->
+    <section class="py-16 md:py-24 px-4 bg-gradient-to-b from-transparent to-[#2B7A78]/30">
+        <div class="max-w-5xl mx-auto glass-card p-6 md:p-10 rounded-3xl text-center live-section border border-[#3AAFA9]/20 shadow-2xl overflow-hidden">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 md:mb-12 GSAP-REVEAL">See Live & Funded Account Results</h2>
+
+            <div class="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar md:grid md:grid-cols-2 gap-6 md:gap-8 pb-8">
+                <!-- Account 1: $50k Funded -->
+                <div class="bg-[#17252A]/60 p-6 rounded-2xl shrink-0 snap-center w-[85vw] sm:w-[400px] md:w-auto border border-[#3AAFA9]/30 shadow-lg hover:border-[#3AAFA9] transition-colors duration-300">
+                    <h3 class="text-xl md:text-2xl font-bold text-[#3AAFA9] mb-6">$50k Funded Account</h3>
+                    <div class="space-y-4 text-left">
+                        <div class="p-3 bg-[#17252A]/80 rounded-xl border-l-4 border-[#3AAFA9] flex items-center justify-between group">
+                            <div>
+                                <p class="text-xs text-[#DEF2F1] font-bold uppercase tracking-wider">MT5 ID</p>
+                                <p class="text-lg font-mono text-[#FEFFFF] mt-1">314338163</p>
+                            </div>
+                            <button onclick="copySingle(this, '314338163')" class="text-[#3AAFA9] hover:text-[#17252A] bg-[#3AAFA9]/10 hover:bg-[#3AAFA9] w-10 h-10 rounded-lg flex items-center justify-center transition-all" title="Copy">
+                                <i class="fa-regular fa-copy"></i>
+                            </button>
+                        </div>
+                        <div class="p-3 bg-[#17252A]/80 rounded-xl border-l-4 border-[#3AAFA9] flex items-center justify-between group">
+                            <div>
+                                <p class="text-xs text-[#DEF2F1] font-bold uppercase tracking-wider">Password</p>
+                                <p class="text-lg font-mono text-[#FEFFFF] mt-1">Tkd@12345</p>
+                            </div>
+                            <button onclick="copySingle(this, 'Tkd@12345')" class="text-[#3AAFA9] hover:text-[#17252A] bg-[#3AAFA9]/10 hover:bg-[#3AAFA9] w-10 h-10 rounded-lg flex items-center justify-center transition-all" title="Copy">
+                                <i class="fa-regular fa-copy"></i>
+                            </button>
+                        </div>
+                        <div class="p-3 bg-[#17252A]/80 rounded-xl border-l-4 border-[#3AAFA9] flex items-center justify-between group">
+                            <div>
+                                <p class="text-xs text-[#DEF2F1] font-bold uppercase tracking-wider">Server</p>
+                                <p class="text-lg font-mono text-[#FEFFFF] mt-1">GoatFunded-Server</p>
+                            </div>
+                            <button onclick="copySingle(this, 'GoatFunded-Server')" class="text-[#3AAFA9] hover:text-[#17252A] bg-[#3AAFA9]/10 hover:bg-[#3AAFA9] w-10 h-10 rounded-lg flex items-center justify-center transition-all" title="Copy">
+                                <i class="fa-regular fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Account 2: $100 USD Live -->
+                <div class="bg-[#17252A]/60 p-6 rounded-2xl shrink-0 snap-center w-[85vw] sm:w-[400px] md:w-auto border border-[#2B7A78]/50 shadow-lg hover:border-[#2B7A78] transition-colors duration-300">
+                    <h3 class="text-xl md:text-2xl font-bold text-[#3AAFA9] mb-6">$100 USD Live Account</h3>
+                    <div class="space-y-4 text-left">
+                        <div class="p-3 bg-[#17252A]/80 rounded-xl border-l-4 border-[#2B7A78] flex items-center justify-between group">
+                            <div>
+                                <p class="text-xs text-[#DEF2F1] font-bold uppercase tracking-wider">MT5 ID</p>
+                                <p class="text-lg font-mono text-[#FEFFFF] mt-1">23973997</p>
+                            </div>
+                            <button onclick="copySingle(this, '23973997')" class="text-[#2B7A78] hover:text-[#FEFFFF] bg-[#2B7A78]/10 hover:bg-[#2B7A78] w-10 h-10 rounded-lg flex items-center justify-center transition-all" title="Copy">
+                                <i class="fa-regular fa-copy"></i>
+                            </button>
+                        </div>
+                        <div class="p-3 bg-[#17252A]/80 rounded-xl border-l-4 border-[#2B7A78] flex items-center justify-between group">
+                            <div>
+                                <p class="text-xs text-[#DEF2F1] font-bold uppercase tracking-wider">Password</p>
+                                <p class="text-lg font-mono text-[#FEFFFF] mt-1">Alox@321</p>
+                            </div>
+                            <button onclick="copySingle(this, 'Alox@321')" class="text-[#2B7A78] hover:text-[#FEFFFF] bg-[#2B7A78]/10 hover:bg-[#2B7A78] w-10 h-10 rounded-lg flex items-center justify-center transition-all" title="Copy">
+                                <i class="fa-regular fa-copy"></i>
+                            </button>
+                        </div>
+                        <div class="p-3 bg-[#17252A]/80 rounded-xl border-l-4 border-[#2B7A78] flex items-center justify-between group">
+                            <div>
+                                <p class="text-xs text-[#DEF2F1] font-bold uppercase tracking-wider">Server</p>
+                                <p class="text-lg font-mono text-[#FEFFFF] mt-1">vantageInternational-Live 19</p>
+                            </div>
+                            <button onclick="copySingle(this, 'vantageInternational-Live 19')" class="text-[#2B7A78] hover:text-[#FEFFFF] bg-[#2B7A78]/10 hover:bg-[#2B7A78] w-10 h-10 rounded-lg flex items-center justify-center transition-all" title="Copy">
+                                <i class="fa-regular fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="mt-12 text-[#DEF2F1] italic font-medium text-lg">Login via MT5 to verify real-time performance.</p>
+        </div>
+    </section>
+</div> 
+<div id="content-lux-grid" class="bot-content hidden">
+
+    <!-- BACKTESTING SECTION (UNDER DEV) -->
+    <section class="py-20 px-4 flex justify-center items-center">
+        <div class="glass-card p-10 md:p-14 rounded-3xl text-center max-w-3xl w-full border border-[#3AAFA9]/30 shadow-[0_0_50px_rgba(58,175,169,0.15)] GSAP-REVEAL">
+            <i class="fa-solid fa-microchip text-6xl text-[#3AAFA9] mb-8 drop-shadow-[0_0_15px_rgba(58,175,169,0.5)] animate-pulse"></i>
+            <h2 class="text-3xl md:text-5xl font-bold text-[#FEFFFF] mb-6 tracking-wide">Under Development</h2>
+            <p class="text-lg md:text-xl text-[#DEF2F1] font-light leading-relaxed">This bot is currently undergoing rigorous live market testing. We will release its official backtesting data once it meets our elite performance standards.</p>
+        </div>
+    </section>
+
+<!-- PRICING SECTION -->
+    <section id="pricing" class="py-12 md:py-20 px-4 bg-[#2B7A78]/10 border-t border-b border-[#3AAFA9]/10">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-16 GSAP-REVEAL">Lux Grid Pricing</h2>
+        
+        <div class="relative max-w-6xl mx-auto">
+            <div class="absolute inset-0 z-50 bg-[#17252A]/60 backdrop-blur-[6px] flex flex-col justify-center items-center rounded-3xl border border-[#3AAFA9]/20 shadow-[0_0_30px_rgba(58,175,169,0.2)]">
+                <i class="fa-solid fa-lock text-5xl md:text-7xl text-[#3AAFA9] mb-6 drop-shadow-[0_0_15px_rgba(58,175,169,0.8)]"></i>
+                <h3 class="text-3xl md:text-5xl font-bold text-[#FEFFFF] mb-3 tracking-widest uppercase">Locked</h3>
+                <p class="text-base md:text-xl text-[#DEF2F1]/90 font-medium">Available after official release.</p>
+            </div>
+            <div class="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar md:grid md:grid-cols-3 gap-4 md:gap-8 pb-6 pr-8 md:pr-0">
+            <div
+                class="glass-card p-6 md:p-8 shrink-0 snap-center w-[75vw] sm:w-[350px] md:w-auto rounded-2xl text-center pricing-card border-b-4 border-[#2B7A78] flex flex-col justify-between hover:-translate-y-4 hover:shadow-[0_20px_40px_rgba(43,122,120,0.3)] transition-all duration-500 cursor-pointer">
+                <div>
+                    <h3 class="text-lg md:text-2xl font-bold mb-2 md:mb-4">3 Months Access</h3>
+                    <p class="text-2xl md:text-4xl font-bold mb-2 md:mb-3 text-[#FEFFFF]">₹6,000</p>
+                    <p
+                        class="text-[10px] sm:text-xs text-[#DEF2F1]/80 font-semibold tracking-widest uppercase mb-6 border-y border-[#DEF2F1]/10 py-2">
+                        Version 4.0 | Optimized Model | Instant Delivery</p>
+                    <ul class="text-[#DEF2F1] mb-8 space-y-2">
+                        <li>Full License Key</li>
+                        <li>24/7 Support</li>
+                        <li>Setup Guide Included</li>
+                        <li class="text-[#3AAFA9] font-bold"><i class="fa-solid fa-bolt mr-1"></i> Free VPS (Short Time)
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex items-start gap-3 mb-4 text-left">
+                    <input type="checkbox"
+                        class="mt-0.5 min-w-[16px] w-4 h-4 rounded border-[#3AAFA9] text-[#3AAFA9] focus:ring-[#3AAFA9] bg-[#17252A] cursor-not-allowed tc-checkbox disabled">
+                    <label class="text-xs text-[#DEF2F1] leading-tight cursor-pointer"
+                        onclick="this.previousElementSibling.click()">I agree to the <span
+                            class="text-[#3AAFA9] font-bold underline cursor-pointer hover:text-[#FEFFFF] transition"
+                            onclick="event.stopPropagation(); window.openTcModal()">Terms & Conditions</span></label>
+                </div>
+                <button onclick="window.openPurchaseModal('3 Months Access', '₹6,000', '$70')"
+                    class="buy-btn w-full py-3 bg-[#2B7A78] rounded-lg font-bold hover:bg-[#3AAFA9] transition text-[#FEFFFF] hover:text-[#17252A] opacity-40 cursor-not-allowed"
+                    disabled>Buy Now</button>
+            </div>
+            <div
+                class="glass-card p-6 md:p-8 rounded-2xl shrink-0 snap-center w-[75vw] sm:w-[350px] md:w-auto text-center pricing-card border-b-4 border-[#3AAFA9] md:scale-105 flex flex-col justify-between hover:-translate-y-4 hover:shadow-[0_20px_40px_rgba(58,175,169,0.3)] transition-all duration-500 cursor-pointer z-10 relative bg-gradient-to-b from-[#3AAFA9]/5 to-transparent">
+                <div>
+                    <div class="bg-[#3AAFA9] text-[#17252A] text-[10px] md:text-xs font-bold py-1 px-3 rounded-full inline-block mb-2 md:mb-4">
+                        POPULAR</div>
+                    <h3 class="text-lg md:text-2xl font-bold mb-2 md:mb-4">6 Months Access</h3>
+                    <p class="text-2xl md:text-4xl font-bold mb-2 md:mb-3 text-[#FEFFFF]">₹11,000</p>
+                    <p
+                        class="text-[10px] sm:text-xs text-[#DEF2F1]/80 font-semibold tracking-widest uppercase mb-6 border-y border-[#DEF2F1]/10 py-2">
+                        Version 4.0 | Optimized Model | Instant Delivery</p>
+                    <ul class="text-[#DEF2F1] mb-8 space-y-2">
+                        <li>Full License Key</li>
+                        <li>Priority Support</li>
+                        <li>Risk Management Preset</li>
+                        <li class="text-[#3AAFA9] font-bold"><i class="fa-solid fa-bolt mr-1"></i> Free VPS (Short Time)
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex items-start gap-3 mb-4 text-left">
+                    <input type="checkbox"
+                        class="mt-0.5 min-w-[16px] w-4 h-4 rounded border-[#3AAFA9] text-[#3AAFA9] focus:ring-[#3AAFA9] bg-[#17252A] cursor-not-allowed tc-checkbox disabled">
+                    <label class="text-xs text-[#DEF2F1] leading-tight cursor-pointer"
+                        onclick="this.previousElementSibling.click()">I agree to the <span
+                            class="text-[#3AAFA9] font-bold underline cursor-pointer hover:text-[#FEFFFF] transition"
+                            onclick="event.stopPropagation(); window.openTcModal()">Terms & Conditions</span></label>
+                </div>
+                <button onclick="window.openPurchaseModal('6 Months Access', '₹11,000', '$130')"
+                    class="buy-btn w-full py-3 bg-[#3AAFA9] rounded-lg font-bold hover:bg-[#2B7A78] transition text-[#17252A] hover:text-[#FEFFFF] opacity-40 cursor-not-allowed"
+                    disabled>Buy Now</button>
+            </div>
+            <div
+                class="glass-card p-6 md:p-8 rounded-2xl shrink-0 snap-center w-[75vw] sm:w-[350px] md:w-auto text-center pricing-card border-b-4 border-[#DEF2F1] flex flex-col justify-between hover:-translate-y-4 hover:shadow-[0_20px_40px_rgba(222,242,241,0.2)] transition-all duration-500 cursor-pointer">
+                <div>
+                    <h3 class="text-lg md:text-2xl font-bold mb-2 md:mb-4">Lifetime Access</h3>
+                    <p class="text-2xl md:text-4xl font-bold mb-2 md:mb-3 text-[#FEFFFF]">₹18,000</p>
+                    <p
+                        class="text-[10px] sm:text-xs text-[#DEF2F1]/80 font-semibold tracking-widest uppercase mb-6 border-y border-[#DEF2F1]/10 py-2">
+                        Version 4.0 | Optimized Model | Instant Delivery</p>
+                    <ul class="text-[#DEF2F1] mb-8 space-y-2">
+                        <li>One-time Payment</li>
+                        <li>VIP Discord Channel</li>
+                        <li>Free Future Updates</li>
+                        <li class="text-[#3AAFA9] font-bold"><i class="fa-solid fa-bolt mr-1"></i> Free VPS (Short Time)
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex items-start gap-3 mb-4 text-left">
+                    <input type="checkbox"
+                        class="mt-0.5 min-w-[16px] w-4 h-4 rounded border-[#3AAFA9] text-[#3AAFA9] focus:ring-[#3AAFA9] bg-[#17252A] cursor-not-allowed tc-checkbox disabled">
+                    <label class="text-xs text-[#DEF2F1] leading-tight cursor-pointer"
+                        onclick="this.previousElementSibling.click()">I agree to the <span
+                            class="text-[#3AAFA9] font-bold underline cursor-pointer hover:text-[#FEFFFF] transition"
+                            onclick="event.stopPropagation(); window.openTcModal()">Terms & Conditions</span></label>
+                </div>
+                <button onclick="window.openPurchaseModal('Lifetime Access', '₹18,000', '$200')"
+                    class="buy-btn w-full py-3 bg-[#DEF2F1] rounded-lg font-bold hover:bg-[#FEFFFF] transition text-[#17252A] opacity-40 cursor-not-allowed"
+                    disabled>Buy Now</button>
+            </div>
+        </div>
+            </div>
+    </section>
+
+    <!-- Live & Funded Accounts Component for Lux Grid -->
     <section class="py-16 md:py-24 px-4 bg-gradient-to-b from-transparent to-[#2B7A78]/30">
         <div class="max-w-5xl mx-auto glass-card p-6 md:p-10 rounded-3xl text-center live-section border border-[#3AAFA9]/20 shadow-2xl overflow-hidden">
             <h2 class="text-3xl md:text-4xl font-bold mb-8 md:mb-12 GSAP-REVEAL">See Live & Funded Account Results</h2>
@@ -1216,4 +1414,5 @@
 </body>
 
 </html>
+
 
